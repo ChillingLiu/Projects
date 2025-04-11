@@ -79,8 +79,8 @@ def least_square(x_data, y_data, degree):
 	return f
 
 
-#filename = "data_points.txt"
-filename = "moore.txt"
+#filename = "Least_Square_data_points.txt"
+filename = "Least_Square_moore.txt"
 data = np.loadtxt(filename)
 x_data = data[:, 0]
 y_data = data[:, 1]
@@ -89,12 +89,12 @@ degree = 3
 # the moore's law goes through in a logarithm way
 # the idea is use np.log to convert the data first
 # get the predicted value and convert back
-if filename == "moore.txt":
+if filename == "Least_Square_moore.txt":
 	y_data = np.log10(y_data)
 
 f = least_square(x_data, y_data, degree)
 
-if filename == "moore.txt":
+if filename == "Least_Square_moore.txt":
 	print("\n---------- Prediction of Moore's Law ----------")
 	x = sympy.symbols("x")
 	prediction1 = f.evalf(subs = {x: 2022})
