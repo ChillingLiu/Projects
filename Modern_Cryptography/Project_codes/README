@@ -1,0 +1,10 @@
+There are 2 programs: “generate_keys.cpp” to generate random key pairs and “rsa_aes.cpp” to manipulate all the operations about encryption and decryption that the project requires.
+
+To start experiment, you need to prepare a plaintext.txt that includes the content you want to encrypt, and compile and run the“generate_key.cpp” to get a random public key “pubic_key.pem” and a random private key “private_key.pem”.
+g++ -o generate_keys generate_keys.cpp -lssl -lcrypto
+
+Then you can compile and run the main program “rsa_aes.cpp” to see the operations showing on the terminal.
+g++ -o rsa_aes rsa_aes.cpp -lssl -lcrypto
+./rsa_aes rsa public_key.pem private_key.pem ase plaintext.txt
+
+The program will generate a random symmetric key key, and encrypt it using RSA and public key, and puts it in symm.key. Then it will built an envelope.env that contains symm.key and plaintext. Then, it will encrypt envelope.env using AES and key and puts it in cipher.enc. After that, it will decrypt the cipher.enc and compare with envelop.env, also decrypt symm.key and compare with key.
