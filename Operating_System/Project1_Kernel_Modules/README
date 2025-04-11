@@ -1,0 +1,11 @@
+This project is composed of 4 files:
+<1> "jiffies.c", "seconds.c" which I edited from the original file hello.c.
+<2> "Makefile" that can make these 2 files together.
+<3> "run.sh" that can display all necessary procedures and show the results concurrently.
+
+To check my programs:
+<1> You can use "make" to compile them and use "insmod", "rmmod", and "dmesg" to see what happened step by step.
+<2> Or you can simply run "run.sh" to see all the necessary procedures by the outputs in the command line and see the results of the 2 problems.
+(Note that "run.sh" may require your passcode because I put "sudo" in it, so don't be afraid of it ^^.)
+
+For more details, please see "Project_Report.pdf".

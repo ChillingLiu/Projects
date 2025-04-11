@@ -1,0 +1,2 @@
+For running the program "collatz.c" and "color.c", just simply use "make" to compile them all, and you can use "insmod", "rmmod" to see what will happen step by step.
+For more detail, you can read the "Project_Report.pdf".
